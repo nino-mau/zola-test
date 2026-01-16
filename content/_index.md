@@ -66,7 +66,7 @@ git clone https://codeberg.org/daudix/duckquill.git themes/duckquill
 It is highly recommended to switch from the `main` branch to the latest release:
 {% end %}
 
-```bash
+```rust
 cd themes/duckquill
 git checkout tags/v6.3.0
 ```
