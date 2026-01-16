@@ -1,0 +1,5 @@
+            - name: Zola Deploy
+  # You may pin to the exact commit or the version.
+  # uses: zbrox/zola-deploy-action@5edecaf515f693c1e9d5470f92aa9ddf9fc20519
+  uses: zbrox/zola-deploy-action@0.12.2
+          
