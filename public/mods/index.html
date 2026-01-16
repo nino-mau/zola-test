@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="en" >
+<head>
+	<!-- 2026-01-16 Fri 15:20 -->
+	<meta charset="UTF-8" />
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="theme-color" content="#9a9996" />
+	<title>Mods - test</title>
+	<link rel="canonical" href="https://nino-mau.github.io/zola-test/mods/" /><link rel="icon" type="image/png" href="https://nino-mau.github.io/zola-test/favicon.png" />
+
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://nino-mau.github.io/zola-test/apple-touch-icon.png" />
+<style type="text/css">
+	:root {--accent-color: #6f8396;}</style>
+
+			<link type="text/css" rel="stylesheet" href="https://nino-mau.github.io/zola-test/style.css" />
+			<link type="text/css" rel="stylesheet" href="https://nino-mau.github.io/zola-test/icons.css" />
+			<link type="text/css" rel="stylesheet" href="https://nino-mau.github.io/zola-test/custom.css" />
+			<script type="text/javascript" defer  src="https://nino-mau.github.io/zola-test/closable.js"></script>
+
+	<meta property="og:site_name" content="test" />
+	<meta property="og:title" content="Mods - test" />
+	<meta property="og:url" content="https://nino-mau.github.io/zola-test/mods/" />
+	<meta property="og:description" content="" /><meta property="og:image" content="https://nino-mau.github.io/zola-test/card.png" /><meta property="og:locale" content="en_US" />
+</head>
+
+<body>
+<div id="sidebar">
+			<div><h2>Table of Contents</h2>
+		<ul><li>
+					<a href="https://nino-mau.github.io/zola-test/mods/#background-image">Background Image</a></li><li>
+					<a href="https://nino-mau.github.io/zola-test/mods/#classic-article-list">Classic Article List</a></li><li>
+					<a href="https://nino-mau.github.io/zola-test/mods/#classic-navbar">Classic Navbar</a></li><li>
+					<a href="https://nino-mau.github.io/zola-test/mods/#classic-strikethrough">Classic Strikethrough</a></li><li>
+					<a href="https://nino-mau.github.io/zola-test/mods/#modern-headings">Modern Headings</a></li><li>
+					<a href="https://nino-mau.github.io/zola-test/mods/#modern-horizontal-rule">Modern Horizontal Rule</a></li><li>
+					<a href="https://nino-mau.github.io/zola-test/mods/#no-edge-highlight">No Edge Highlight</a></li></ul></div>
+		</div><main id="main-content">
+		
+<h1>Mods</h1><p>Mods enhance/change some Duckquill visuals. They are updated alongside Duckquill to ensure that you don't need to manually update them every release.</p>
+<p>To enable these mods, you need to paste provided Sass to <a href="https://nino-mau.github.io/zola-test/#custom-styles">appropriate file</a>, e.g <code>sass/mods.scss</code> under your website, then enable it in <code>config.toml</code>:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="toml"><span class="giallo-l"><span style="color: #9399B2;">[</span><span>extra</span><span style="color: #9399B2;">]</span></span>
+<span class="giallo-l"><span>styles</span><span style="color: #94E2D5;"> =</span><span style="color: #9399B2;"> [</span><span style="color: #A6E3A1;">&quot;mods.css&quot;</span><span style="color: #9399B2;">]</span></span></code></pre><h2 id="background-image"><a class="zola-anchor" href="#background-image" aria-label="Anchor link for: background-image"><i class="icon"></i></a>
+Background Image</h2>
+<p>Want to set some nice image as a background? We got you covered:</p>
+<p><img src="https://files.catbox.moe/no8vfc.png" alt="background image" /></p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="scss"><span class="giallo-l"><span style="color: #89B4FA;">body</span><span style="color: #9399B2;"> {</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;">    background-image</span><span style="color: #94E2D5;">:</span><span style="color: #89B4FA;font-style: italic;"> var</span><span style="color: #9399B2;">(</span><span style="color: #89B4FA;">--bg-overlay</span><span style="color: #9399B2;">)</span><span>, </span><span style="color: #89B4FA;font-style: italic;">url</span><span style="color: #9399B2;">(</span><span style="color: #A6E3A1;">&quot;https://images.unsplash.com/photo-1523712999610-f77fbcfc3843&quot;</span><span style="color: #9399B2;">);</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;">    background-position</span><span style="color: #94E2D5;">:</span><span> center</span><span style="color: #9399B2;">;</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;">    background-size</span><span style="color: #94E2D5;">:</span><span> cover</span><span style="color: #9399B2;">;</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;">    background-attachment</span><span style="color: #94E2D5;">:</span><span> fixed</span><span style="color: #9399B2;">;</span></span>
+<span class="giallo-l"><span style="color: #9399B2;">}</span></span></code></pre>
+<p>Most of the time contrast should be okay, but what if it's not? Simply adjust the opacity of <code>--bg-overlay</code> based on your needs:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="scss"><span class="giallo-l"><span style="color: #CBA6F7;">@import</span><span style="color: #A6E3A1;"> &quot;../themes/duckquill/sass/_variables.scss&quot;</span><span style="color: #9399B2;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">@include</span><span style="color: #89B4FA;font-style: italic;"> theme-variables</span><span> using ($theme) </span><span style="color: #9399B2;">{</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">    @if</span><span style="color: #89B4FA;"> $theme</span><span style="color: #94E2D5;"> ==</span><span style="color: #A6E3A1;"> &quot;dark&quot;</span><span style="color: #9399B2;"> {</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;">        --bg-overlay</span><span style="color: #94E2D5;">:</span><span style="color: #89B4FA;font-style: italic;"> linear-gradient</span><span style="color: #9399B2;">(</span><span style="color: #89B4FA;font-style: italic;">rgb</span><span style="color: #9399B2;">(</span><span style="color: #FAB387;">0 0 0</span><span style="color: #94E2D5;"> /</span><span style="color: #FAB387;"> 0.9</span><span style="color: #9399B2;">),</span><span style="color: #89B4FA;font-style: italic;"> rgb</span><span style="color: #9399B2;">(</span><span style="color: #FAB387;">0 0 0</span><span style="color: #94E2D5;"> /</span><span style="color: #FAB387;"> 0.9</span><span style="color: #9399B2;">));</span></span>
+<span class="giallo-l"><span style="color: #9399B2;">    }</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">    @else </span><span style="color: #9399B2;">{</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;">        --bg-overlay</span><span style="color: #94E2D5;">:</span><span style="color: #89B4FA;font-style: italic;"> linear-gradient</span><span style="color: #9399B2;">(</span><span style="color: #89B4FA;font-style: italic;">rgb</span><span style="color: #9399B2;">(</span><span style="color: #FAB387;">255 255 255</span><span style="color: #94E2D5;"> /</span><span style="color: #FAB387;"> 0.8</span><span style="color: #9399B2;">),</span><span style="color: #89B4FA;font-style: italic;"> rgb</span><span style="color: #9399B2;">(</span><span style="color: #FAB387;">255 255 255</span><span style="color: #94E2D5;"> /</span><span style="color: #FAB387;"> 0.8</span><span style="color: #9399B2;">));</span></span>
+<span class="giallo-l"><span style="color: #9399B2;">    }</span></span>
+<span class="giallo-l"><span style="color: #9399B2;">}</span></span></code></pre><h2 id="classic-article-list"><a class="zola-anchor" href="#classic-article-list" aria-label="Anchor link for: classic-article-list"><i class="icon"></i></a>
+Classic Article List</h2>
+<p>Prefer the less fancy look of the article list used in Duckquill some time ago (to some extent)? It can be done with the <code>classic-article-list</code> mod:</p>
+<p><img src="https://files.catbox.moe/yf5feo.png" alt="classic article list" /></p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="scss"><span class="giallo-l"><span style="color: #CBA6F7;">@use</span><span style="color: #A6E3A1;"> &quot;../themes/duckquill/sass/mods/classic-article-list&quot;</span><span style="color: #9399B2;">;</span></span></code></pre><h2 id="classic-navbar"><a class="zola-anchor" href="#classic-navbar" aria-label="Anchor link for: classic-navbar"><i class="icon"></i></a>
+Classic Navbar</h2>
+<p>You can make navbar have more traditional look by using the <code>classic-nav</code> mod:</p>
+<p><img src="https://files.catbox.moe/ga4dmv.png" alt="classic navabr" /></p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="scss"><span class="giallo-l"><span style="color: #CBA6F7;">@use</span><span style="color: #A6E3A1;"> &quot;../themes/duckquill/sass/mods/classic-nav&quot;</span><span style="color: #9399B2;">;</span></span></code></pre>
+<p>Or you can make it sticked to top but not full-width with the <code>sticked-nav</code> mod:</p>
+<blockquote class="markdown-alert-note">
+	<p>Not compatible with the <code>classic-nav</code> mod.</p>
+
+</blockquote>
+<p><img src="https://files.catbox.moe/bfu3p7.png" alt="sticked navabr" /></p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="scss"><span class="giallo-l"><span style="color: #CBA6F7;">@use</span><span style="color: #A6E3A1;"> &quot;../themes/duckquill/sass/mods/sticked-nav&quot;</span><span style="color: #9399B2;">;</span></span></code></pre><h2 id="classic-strikethrough"><a class="zola-anchor" href="#classic-strikethrough" aria-label="Anchor link for: classic-strikethrough"><i class="icon"></i></a>
+Classic Strikethrough</h2>
+<p>The default strikethrough style is too much? It can be fixed using the <code>classic-del</code> mod:</p>
+<p><img src="https://files.catbox.moe/y2tbwm.png" alt="plain strikethrough" /></p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="scss"><span class="giallo-l"><span style="color: #CBA6F7;">@use</span><span style="color: #A6E3A1;"> &quot;../themes/duckquill/sass/mods/classic-del&quot;</span><span style="color: #9399B2;">;</span></span></code></pre><h2 id="modern-headings"><a class="zola-anchor" href="#modern-headings" aria-label="Anchor link for: modern-headings"><i class="icon"></i></a>
+Modern Headings</h2>
+<p>Default headings might not fit your taste, that's understandable. They can be <del>made boring</del> fixed with the <code>modern-headings</code> mod:</p>
+<p><img src="https://files.catbox.moe/6ok740.png" alt="boring headings" /></p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="scss"><span class="giallo-l"><span style="color: #CBA6F7;">@use</span><span style="color: #A6E3A1;"> &quot;../themes/duckquill/sass/mods/modern-headings&quot;</span><span style="color: #9399B2;">;</span></span></code></pre><h2 id="modern-horizontal-rule"><a class="zola-anchor" href="#modern-horizontal-rule" aria-label="Anchor link for: modern-horizontal-rule"><i class="icon"></i></a>
+Modern Horizontal Rule</h2>
+<p>Don't like that fancy horizontal rule? Make it more modern with the <code>modern-hr</code> mod:</p>
+<p><img src="https://files.catbox.moe/qyqzoy.png" alt="modern horizontal rule" /></p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="scss"><span class="giallo-l"><span style="color: #CBA6F7;">@use</span><span style="color: #A6E3A1;"> &quot;../themes/duckquill/sass/mods/modern-hr&quot;</span><span style="color: #9399B2;">;</span></span></code></pre><h2 id="no-edge-highlight"><a class="zola-anchor" href="#no-edge-highlight" aria-label="Anchor link for: no-edge-highlight"><i class="icon"></i></a>
+No Edge Highlight</h2>
+<p>Hate the skeuomorphic edge highlight on all semi-transparent elements? Let's get rid of it using the <code>no-edge-highlight</code> mod:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="scss"><span class="giallo-l"><span style="color: #CBA6F7;">@use</span><span style="color: #A6E3A1;"> &quot;../themes/duckquill/sass/mods/no-edge-highlight&quot;</span><span style="color: #9399B2;">;</span></span></code></pre>
+
+	</main>
+	<footer id="site-footer">
+</footer>
+
+	
+
+	<style type="text/css">
+	:root {
+		--alert-note-text: "Note";
+		--alert-tip-text: "Tip";
+		--alert-important-text: "Important";
+		--alert-warning-text: "Warning";
+		--alert-caution-text: "Caution";
+	}
+</style>
+
+
+</body>
+</html>
