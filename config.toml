@@ -11,6 +11,10 @@ theme = "duckquill"
 
 title = "test"
 
+taxonomies = [
+    {name = "tags"},
+]
+
 [markdown]
 
 [markdown.highlighting]
